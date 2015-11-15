@@ -23,7 +23,7 @@ AS $$
    from summpy import lexrank
 
    res = lexrank.summarize(unicode(t, 'utf-8'), sent_limit=s_limit)
-   for s in res[0]:
+   for s in res:
       yield(s.encode('utf-8'))
 $$ LANGUAGE plpythonu;
 
